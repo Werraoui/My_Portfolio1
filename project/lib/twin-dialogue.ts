@@ -192,7 +192,7 @@ export function askTwin(question: string, language: Language) {
   if (exact) return exact.answer[language];
 
   let bestScore = 0;
-  let best = twinUi[language].fallback;
+  let best: string = twinUi[language].fallback;
 
   twinKnowledge.forEach((item) => {
     let score = 0;
